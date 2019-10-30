@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
+import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { LoginComponent } from './core/components/login/login.component';
 
 import { SignupComponent } from './core/components/signup/signup.component';
@@ -20,33 +20,28 @@ import { AfterLoginService } from './core/services/after-login.service';
 import { BeforeLoginService } from './core/services/before-login.service';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     LoginComponent,
     SignupComponent,
     ProfileComponent,
     RequestResetComponent,
-    ResponseResetComponent,
-    HomeComponent,
-    RegisterComponent
+    ResponseResetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,
     HttpClientModule,
-    SnotifyModule,
+    SnotifyModule
   ],
   providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
