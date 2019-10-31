@@ -2,13 +2,18 @@
     position: absolute;
     padding: 0 5%;
     line-height: 2;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;  
 }
 
 .navbar-brand {
-    padding-left: 97%;
     position: absolute;
+    padding-left: 96%;
     background:rgba(19, 19, 19, 0.4);
     padding-top: 1%;
     text-align: right;
+    font-size: 17px;
 }
 
