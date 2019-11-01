@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -19,9 +18,42 @@ import { AuthService } from './core/services/auth.service';
 import { AfterLoginService } from './core/services/after-login.service';
 import { BeforeLoginService } from './core/services/before-login.service';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Angular Material
 import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import {
+  MatInputModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatIconModule,
+  MatListModule,
+  MatButtonModule,
+  MatCardModule,
+  MatMenuModule,
+  MatCheckboxModule,
+  MatTooltipModule,
+  MatButtonToggleModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatProgressBarModule,
+  MatRadioModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSelectModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatDialogModule,
+  MatChipsModule,
+  MatAutocompleteModule,
+  MatFormFieldModule
+} from "@angular/material";
+import { NotfoundComponent } from './core/components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +63,40 @@ import { MatSliderModule } from '@angular/material/slider';
     SignupComponent,
     ProfileComponent,
     RequestResetComponent,
-    ResponseResetComponent
+    ResponseResetComponent,
+    NotfoundComponent
   ],
   imports: [
+    MatInputModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatMenuModule,
+    MatTooltipModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatProgressBarModule,
+    MatRadioModule,
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatAutocompleteModule,
+// other
     BrowserModule,
     AppRoutingModule,
     BrowserModule,

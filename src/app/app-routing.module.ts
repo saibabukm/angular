@@ -5,13 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './core/components/login/login.component';
 import { SignupComponent } from './core/components/signup/signup.component';
 import { ProfileComponent } from './core/components/profile/profile.component';
+import { NotfoundComponent } from './core/components/notfound/notfound.component';
 import { RequestResetComponent } from './core/components/password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './core/components/password/response-reset/response-reset.component';
+
+/**Services */
 import { BeforeLoginService } from './core/services/before-login.service';
 import { AfterLoginService } from './core/services/after-login.service';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent, canActivate: [] },
+
+  //no layout routes
   { 
     path: 'login', 
     component: LoginComponent,
@@ -37,7 +41,13 @@ const routes: Routes = [
     component: ResponseResetComponent,
     canActivate: [BeforeLoginService]
   },
-  { path: '**', redirectTo: '' }
+  {
+    path: 'notfound',
+    component: NotfoundComponent,
+    canActivate: [AfterLoginService]
+  },
+  // otherwise redirect to notfound
+  { path: '**', redirectTo: '/notfound' }
 ];
 
 @NgModule({
