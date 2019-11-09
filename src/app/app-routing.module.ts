@@ -13,6 +13,8 @@ import { ResponseResetComponent } from './core/components/password/response-rese
 import { BeforeLoginService } from './core/services/before-login.service';
 import { AfterLoginService } from './core/services/after-login.service';
 
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+
 const routes: Routes = [
 
   //no layout routes
@@ -46,8 +48,14 @@ const routes: Routes = [
     component: NotfoundComponent,
     canActivate: [AfterLoginService]
   },
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent,
+    canActivate: [AfterLoginService]
+  },
   // otherwise redirect to notfound
   { path: '**', redirectTo: '/notfound' }
+  
 ];
 
 @NgModule({

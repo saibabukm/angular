@@ -54,6 +54,9 @@ import {
   MatFormFieldModule
 } from "@angular/material";
 import { NotfoundComponent } from './core/components/notfound/notfound.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { NotfoundComponent } from './core/components/notfound/notfound.component
     ProfileComponent,
     RequestResetComponent,
     ResponseResetComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    AdminComponent,
+    AdminDashboardComponent,
+    AdminHeaderComponent
   ],
   imports: [
     MatInputModule,

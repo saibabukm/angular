@@ -1,0 +1,86 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async)">
+    <mat-toolbar color="primary"> <i class="material-icons">
+        dashboard
+      </i> Dashboard </mat-toolbar>
+
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            And
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/bravosidenav">Admin01</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/chisidenav">Client02</a>
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            nand
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/sigmasidenav">Admin01</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/pentasidenav">Client02</a>
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Others
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/analytics">Analytics</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/server">Server</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/xero">Xero</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/email">Email</a>
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="true">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <a style="cursor: pointer"><i matTooltip="Click me!" matTooltipPosition="right">
+          <mat-icon [routerLink]="['/admin-dashboard']">home</mat-icon>
+        </i></a>
+      <span class="margin_left_10px"></span>
+
+      <a style="cursor:pointer" class="edit"><i matTooltip="only admin can edit" matTooltipPosition="left">
+          <mat-icon [routerLink]="['/ckeditor']">edit</mat-icon>
+        </i></a>
+      <a style="cursor: pointer" class="search"><i matTooltip="Search" matTooltipPosition="left">
+          <mat-icon [routerLink]="['/filter']">search</mat-icon>
+        </i></a>
+      <a style="cursor:pointer" class="btn-logout"><i matTooltip="Logout" matTooltipPosition="left">
+          <mat-icon href="#" (click)="logout($event)" *ngIf="loggedIn">input</mat-icon>
+        </i></a>
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <button class="top" *ngIf="isShow" (click)="gotoTop()">👆</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
