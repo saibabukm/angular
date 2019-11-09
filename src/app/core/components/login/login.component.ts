@@ -13,8 +13,10 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent implements OnInit {
 
   public form = {
-    email: null,
-    password: null
+    // email: null,
+    email: 'xeqenecur@mailinator.net',
+    // password: null
+    password: 'Pa$$w0rd!'
   };
 
   public error = null;
