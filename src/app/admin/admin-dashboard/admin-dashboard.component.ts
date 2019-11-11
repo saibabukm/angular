@@ -15,11 +15,19 @@ export class AdminDashboardComponent implements OnInit {
   public currentUser;
   public loggedIn: boolean;
   topPosToStartShowing = 100;
-  
+
+  // Number of cards to be generated with column and rows to be covered  
+  card1 = [
+    { title: 'MS', cols: 1, rows: 1 }
+  ];
+  card2 = [
+    { title: 'Rec', cols: 1, rows: 1 }
+  ];
+
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
-  constructor(private breakpointObserver: BreakpointObserver,    private Auth: AuthService,
-    private router: Router, private Token: TokenService) { 
-    this.currentUser = localStorage.getItem('currentUser')? JSON.parse(localStorage.getItem('currentUser')) : '';
+  constructor(private breakpointObserver: BreakpointObserver, private Auth: AuthService,
+    private router: Router, private Token: TokenService) {
+    this.currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : '';
   }
 
   @HostListener('window:scroll')
