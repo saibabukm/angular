@@ -1,4 +1,4 @@
-.card { background-image: url(./../../../../assets/images/login-bg.jpg) !important;    height: 100vh;
+.card { background-image: url(./../../../../assets/images/kt.jpg) !important;    height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     text-align: center;
@@ -8,6 +8,11 @@
     padding-top: 10%;
     margin-left: 83px;
     color: #ffffff;
+}
+
+.title {
+    color: white;
+    font-weight: 500;
 }
 
 .alert-danger {
@@ -29,7 +34,8 @@
 .card-body {
     background:rgba(19, 19, 19, 0.4);
     overflow: hidden;
-    width: 35%;
-    height: 30%;
+    width: 30%;
+    height: 25%;
     margin-left: 35%;
+    padding-top: 4%;
 }
