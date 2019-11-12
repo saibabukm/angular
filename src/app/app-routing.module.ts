@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 /**Componenets */
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './core/components/login/login.component';
 import { SignupComponent } from './core/components/signup/signup.component';
 import { ProfileComponent } from './core/components/profile/profile.component';
@@ -18,6 +19,11 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 const routes: Routes = [
 
   //no layout routes
+  { 
+    path: '', 
+    component: HomeComponent,
+    canActivate: [BeforeLoginService] 
+  },
   { 
     path: 'login', 
     component: LoginComponent,

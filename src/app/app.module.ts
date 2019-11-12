@@ -55,7 +55,9 @@ import {
 import { NotfoundComponent } from './core/components/notfound/notfound.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
-import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
+import { HeaderComponent } from './shared/layout/header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { AdminHeaderComponent } from './admin/admin-header/admin-header.componen
     NotfoundComponent,
     AdminComponent,
     AdminDashboardComponent,
-    AdminHeaderComponent
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     MatInputModule,
