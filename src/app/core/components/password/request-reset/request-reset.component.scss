@@ -1,4 +1,4 @@
-.card { background-image: url(./../../../../../assets/images/kt.jpg) !important;    height: 100vh;
+.card { background-image: url(./../../../../../assets/images/kt.jpg) !important;    height: 92vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     text-align: center;
@@ -6,8 +6,8 @@
 
 
 .card-header{
-    padding-top: 10px;
-    color: rebeccapurple;
+    padding-top: 92px;
+    // color: rebeccapurple;
     font-weight: bold;
 }
 
@@ -17,7 +17,7 @@
     overflow: hidden;
     font-weight: bold;
     width: 35%;
-    margin-top: 5%;
+    margin-top: 0;
     height: 30%;
     margin-left: 35%;
 }
