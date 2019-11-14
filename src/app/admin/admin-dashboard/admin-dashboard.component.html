@@ -99,22 +99,12 @@
 <!DOCTYPE html>
 <html>
 
-<body bgcolor="#E6E6FA">
-
-  <!-- <app-home></app-home> -->
-  <div class="maging_left_16_per"></div>
-
-  <div class="knowledgebase" fxlayout="column" fxlayoutalign="center center"
-    style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
-    <div class="hero-text mb-32">
-      <h3>Welcome to our knowledge base!</h3>
-    </div>
-  </div>
+<!-- <body bgcolor="#E6E6FA"> -->
 
   <div class="grid-container">
     <h1 class="mat-h1"><i class="material-icons">
         dashboard
-      </i>Home Dashboard</h1>
+      </i>Admin Dashboard</h1>
     <mat-grid-list cols="2" rowHeight="350px">
       <mat-grid-tile *ngFor="let card of card1" [colspan]="card.cols" [rowspan]="card.rows">
         <mat-card class="dashboard-card">
@@ -123,11 +113,11 @@
               <!-- {{card.title}} -->
               <button mat-stroked-button color="primary" [routerLink]="['/bravosidenav']">{{card.title}}</button>
               <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <!-- <mat-icon>more_vert</mat-icon>   -->
+                <mat-icon>more_vert</mat-icon>  
               </button>
               <mat-menu #menu="matMenu" xPosition="before">
-                <!-- <button mat-menu-item>Expand</button>   -->
-                <!-- <button mat-menu-item>Remove</button>   -->
+                <button mat-menu-item>Expand</button>  
+                <button mat-menu-item>Remove</button>  
               </mat-menu>
             </mat-card-title>
           </mat-card-header>
@@ -150,11 +140,11 @@
             <mat-card-title>
               <button mat-stroked-button color="accent" [routerLink]="['/sigmasidenav']">{{card.title}}</button>
               <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <!-- <mat-icon>more_vert</mat-icon>   -->
+                <mat-icon>more_vert</mat-icon>  
               </button>
               <mat-menu #menu="matMenu" xPosition="before">
-                <!-- <button mat-menu-item>Expand</button>   -->
-                <!-- <button mat-menu-item>Remove</button>   -->
+                <button mat-menu-item>Expand</button>  
+                <button mat-menu-item>Remove</button>  
               </mat-menu>
             </mat-card-title>
           </mat-card-header>
@@ -174,6 +164,6 @@
 
     </mat-grid-list>
   </div>
-</body>
+<!-- </body> -->
 
 </html>
