@@ -12,3 +12,20 @@
     padding-top: 12px;
     border-radius: 5px;
 }
+
+.footer {
+    height:40px;
+    background:teal;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 5px;
+    clear: both;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.footer span {
+  position: absolute;  
+}
