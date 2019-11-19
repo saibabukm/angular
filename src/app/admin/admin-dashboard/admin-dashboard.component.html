@@ -81,12 +81,14 @@
       <button mat-button [matMenuTriggerFor]="menu" class="profile">
         <mat-icon>account_circle</mat-icon>
       </button>
+
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon [routerLink]="['/profile']">account_circle</mat-icon>Profile
+        <button mat-menu-item [routerLink]="['/profile']">
+          <mat-icon>account_circle</mat-icon>Profile
         </button>
-        <button mat-menu-item>
-          <mat-icon href="#" (click)="logout($event)" *ngIf="loggedIn">input</mat-icon>Logout
+
+        <button mat-menu-item (click)="logout($event)" *ngIf="loggedIn">
+          <mat-icon href="#">input</mat-icon>Logout
         </button>
       </mat-menu>
 
@@ -101,69 +103,69 @@
 
 <!-- <body bgcolor="#E6E6FA"> -->
 
-  <div class="grid-container">
-    <h1 class="mat-h1"><i class="material-icons">
-        dashboard
-      </i>Admin Dashboard</h1>
-    <mat-grid-list cols="2" rowHeight="350px">
-      <mat-grid-tile *ngFor="let card of card1" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title>
-              <!-- {{card.title}} -->
-              <button mat-stroked-button color="primary" [routerLink]="['/bravosidenav']">{{card.title}}</button>
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>  
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>  
-                <button mat-menu-item>Remove</button>  
-              </mat-menu>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="dashboard-card-content" style="text-align: left">
-            <div>Sed sodales urna sed magna tempus viverra.
-            </div>
-            <br>
-            <div class="subtitle">
-              <button mat-stroked-button color="warn" [routerLink]="['/chisidenav']">Clit</button>
-            </div>
-            <br>
-            【 Ut id erat sagittis dui tempor dapibus. 】
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
+<div class="grid-container">
+  <h1 class="mat-h1"><i class="material-icons">
+      dashboard
+    </i>Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of card1" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <!-- {{card.title}} -->
+            <button mat-stroked-button color="primary" [routerLink]="['/bravosidenav']">{{card.title}}</button>
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content" style="text-align: left">
+          <div>Sed sodales urna sed magna tempus viverra.
+          </div>
+          <br>
+          <div class="subtitle">
+            <button mat-stroked-button color="warn" [routerLink]="['/chisidenav']">Clit</button>
+          </div>
+          <br>
+          【 Ut id erat sagittis dui tempor dapibus. 】
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
 
-      <mat-grid-tile *ngFor="let card of card2" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title>
-              <button mat-stroked-button color="accent" [routerLink]="['/sigmasidenav']">{{card.title}}</button>
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>  
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>  
-                <button mat-menu-item>Remove</button>  
-              </mat-menu>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="dashboard-card-content" style="text-align: left">
-            <div>
-              Suspendisse eget risus vitae odio tristique tempus.
-            </div>
-            <br>
-            <div class="subtitle">
-              <button mat-stroked-button color="primary" [routerLink]="['/pentasidenav']">Pro</button>
-            </div>
-            <br>
-            Pellentesque accumsan turpis quis est accumsan accumsan.
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
+    <mat-grid-tile *ngFor="let card of card2" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <button mat-stroked-button color="accent" [routerLink]="['/sigmasidenav']">{{card.title}}</button>
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content" style="text-align: left">
+          <div>
+            Suspendisse eget risus vitae odio tristique tempus.
+          </div>
+          <br>
+          <div class="subtitle">
+            <button mat-stroked-button color="primary" [routerLink]="['/pentasidenav']">Pro</button>
+          </div>
+          <br>
+          Pellentesque accumsan turpis quis est accumsan accumsan.
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
 
-    </mat-grid-list>
-  </div>
+  </mat-grid-list>
+</div>
 <!-- </body> -->
 
 </html>

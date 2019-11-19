@@ -2,6 +2,7 @@
 <div class="mt-4 col-8 offset-2">
     <div class="card">
         <div class="card-header"></div>
+        <div class="form-title">User Login</div>
         <div class="card-body">
             <form #loginForm=ngForm (ngSubmit)="onSubmit()">
 
@@ -9,7 +10,6 @@
                     {{error}}
                 </div>
                 <div class="form-group row">
-                    <div class="form-title">User Login</div>
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                         <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email"
@@ -27,14 +27,15 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10 offset-2">
-
-                        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+<br>
+                        <button type="submit" class="btn btn-primary" style="margin-right:54px;" [disabled]="!loginForm.valid">Login</button>
 
                         <a routerLink="/signup" class="btn btn-info float-right" style="margin: 10px;"> Sign Up</a>
 
                     </div>
                 </div>
                 <small class=float-right>
+                    <br>
                     <a routerLink="/request-password-reset" style="text-decoration: none;">Reset Password</a>
                 </small>
             </form>

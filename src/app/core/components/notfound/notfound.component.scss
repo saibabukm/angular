@@ -29,11 +29,12 @@ body {
     margin-top: 40px;
   }
   .buttons-con .action-link-wrap a {
-    background: #68c950;
+    // background: #68c950;
+    background: teal;
     padding: 8px 25px;
     border-radius: 4px;
     color: #FFF;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     transition: all 0.3s linear;
     cursor: pointer;
