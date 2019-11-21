@@ -10,16 +10,16 @@
                     {{error}}
                 </div>
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label" style="position: absolute;">Email</label>
+                    <div class="col-sm-10" style="margin-left: 32%;">
                         <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email"
                             [(ngModel)]="form.email" required>
                     </div>
                 </div>
-
+<br>
                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label" style="position: absolute;">Password</label>
+                    <div class="col-sm-10" style="padding-left: 32%;">
                         <input type="password" name="password" class="form-control" id="inputPassword3"
                             placeholder="Password" [(ngModel)]="form.password" required>
                     </div>
@@ -27,20 +27,21 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10 offset-2">
-<br>
-                        <button type="submit" class="btn btn-primary" style="margin-right:54px;" [disabled]="!loginForm.valid">Login</button>
+                        <br>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 32%;"
+                            [disabled]="!loginForm.valid">Login</button>
 
-                        <a routerLink="/signup" class="btn btn-info float-right" style="margin: 10px;"> Sign Up</a>
+                        <a routerLink="/signup" class="btn btn-info float-right" style="margin-left: 10%; text-decoration: none"> Sign Up</a>
 
                     </div>
                 </div>
                 <small class=float-right>
                     <br>
-                    <a routerLink="/request-password-reset" style="text-decoration: none;">Reset Password</a>
+                    <a routerLink="/request-password-reset" style="text-decoration: none; padding-left: 35%;">Reset Password</a>
                 </small>
             </form>
         </div>
     </div>
-    
+
 </div>
 <app-footer></app-footer>

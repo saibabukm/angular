@@ -5,15 +5,15 @@
         <div class="card-body">
             <form #RequestResetForm=ngForm (ngSubmit)="onSubmit()">
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label" style="position: absolute; margin-left: 84px;">Email</label>
                     <div class="col-sm-10">
-                        <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email"
+                        <input type="email" name="email" class="form-control" style="margin-left:32%;" id="inputEmail3" placeholder="Email"
                             [(ngModel)]="form.email" required>
                     </div>
                 </div>
-
+                <br>
                 <div class="form-group row">
-                    <div class="col-sm-10 offset-2">
+                    <div class="col-sm-10 offset-2" style="text-align: center; margin-left: 6%;">
 
                         <button type="submit" class="btn btn-primary" [disabled]="!RequestResetForm.valid">Send Password
                             Reset Email</button>

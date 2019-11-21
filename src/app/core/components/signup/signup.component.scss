@@ -1,20 +1,21 @@
 .card { background-image: url(./../../../../assets/images/teal.svg) !important;    height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    text-align: center;
 }
 
 .card-header{
-    font-weight: bold;
+    font-weight: 500;
+    color: #FFF;
     padding-top: 8%;
+    text-align: center;
 }
 
 .card-body {
-    padding-top: 1%;
+    padding-top: 1%;   
     background:rgba(19, 19, 19, 0.4);
 }
 
 .alert {
     color: red;
-    font-weight: bold;
+    font-weight: 500;
 }
