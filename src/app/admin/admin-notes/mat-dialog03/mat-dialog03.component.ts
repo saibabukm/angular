@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-mat-dialog03',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mat-dialog03.component.scss']
 })
 export class MatDialog03Component implements OnInit {
-
-  constructor() { }
+  dataJson: any;
+  
+  constructor(public thisDialogRef: MatDialogRef<MatDialog03Component>, @Inject(MAT_DIALOG_DATA) public data: string) {}
 
   ngOnInit() {
+  }
+
+  onCloseCancel() {
+    this.thisDialogRef.close('CLOSE');
   }
 
 }

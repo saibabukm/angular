@@ -1,1 +1,15 @@
-<p>mat-dialog03 works!</p>
+<div>
+    <h2 mat-dialog-title>Intro3</h2>
+    <hr>
+    <mat-dialog-content>
+        <div [innerHTML]="dataJson">
+        </div>
+        <br>
+        <br>
+        <strong>{{data}}</strong>
+    </mat-dialog-content>
+    <hr>
+    <mat-dialog-actions align="end">
+        <button mat-button color="warn" (click)="onCloseCancel()">CLOSE</button>
+    </mat-dialog-actions>
+</div>

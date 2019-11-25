@@ -113,8 +113,8 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item [routerLink]="['/mat-dialog01']">Expand</button>
-              <button mat-menu-item [routerLink]="['/mat-dialog02']">Remove</button>
+              <button mat-menu-item (click)="openDialog1()">Expand</button>
+              <button mat-menu-item (click)="openDialog2()">Remove</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
@@ -140,8 +140,8 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item [routerLink]="['/mat-dialog03']">Expand</button>
-              <button mat-menu-item [routerLink]="['/mat-dialog04']">Remove</button>
+              <button mat-menu-item (click)="openDialog3()">Expand</button>
+              <button mat-menu-item (click)="openDialog4()">Remove</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>

@@ -64,7 +64,7 @@ const routes: Routes = [
     canActivate: [AfterLoginService]
   },
   // otherwise redirect to notfound
-  { path: '**', redirectTo: '/notfound' },
+  // { path: '**', redirectTo: '/notfound' },
   {
     path: 'mat-dialog01',
     component: MatDialog01Component,
