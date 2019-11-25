@@ -10,14 +10,15 @@
       <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            And
+            Dashboards
           </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-nav-list>
           <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/bravosidenav">Admin01</a>
+          <a mat-list-item routerLink="/analytics">Analytics</a>
           <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/chisidenav">Client02</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/project">Project</a>
           <mat-divider></mat-divider>
         </mat-nav-list>
       </mat-expansion-panel>
@@ -25,14 +26,14 @@
       <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            nand
+            Knowledge Base
           </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-nav-list>
           <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/sigmasidenav">Admin01</a>
+          <a mat-list-item routerLink="/angular">Angular</a>
           <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/pentasidenav">Client02</a>
+          <a mat-list-item routerLink="/laravel">Laravel</a>
           <mat-divider></mat-divider>
         </mat-nav-list>
       </mat-expansion-panel>
@@ -45,13 +46,7 @@
         </mat-expansion-panel-header>
         <mat-nav-list>
           <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/analytics">Analytics</a>
-          <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/server">Server</a>
-          <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/xero">Xero</a>
-          <mat-divider></mat-divider>
-          <a mat-list-item routerLink="/email">Email</a>
+          <a mat-list-item routerLink="/filemanager">File Manager</a>
           <mat-divider></mat-divider>
         </mat-nav-list>
       </mat-expansion-panel>
@@ -84,7 +79,7 @@
 
       <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['/profile']">
-          <mat-icon>account_circle</mat-icon>Profile
+          <mat-icon>account_circle</mat-icon>My Profile
         </button>
 
         <button mat-menu-item (click)="logout($event)" *ngIf="loggedIn">
@@ -113,13 +108,13 @@
         <mat-card-header>
           <mat-card-title>
             <!-- {{card.title}} -->
-            <button mat-stroked-button color="primary" [routerLink]="['/bravosidenav']">{{card.title}}</button>
+            <button mat-stroked-button color="primary">{{card.title}}</button>
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+              <button mat-menu-item [routerLink]="['/mat-dialog01']">Expand</button>
+              <button mat-menu-item [routerLink]="['/mat-dialog02']">Remove</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
@@ -128,7 +123,7 @@
           </div>
           <br>
           <div class="subtitle">
-            <button mat-stroked-button color="warn" [routerLink]="['/chisidenav']">Clit</button>
+            <button mat-stroked-button color="warn">Clit</button>
           </div>
           <br>
           【 Ut id erat sagittis dui tempor dapibus. 】
@@ -140,13 +135,13 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            <button mat-stroked-button color="accent" [routerLink]="['/sigmasidenav']">{{card.title}}</button>
+            <button mat-stroked-button color="accent">{{card.title}}</button>
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+              <button mat-menu-item [routerLink]="['/mat-dialog03']">Expand</button>
+              <button mat-menu-item [routerLink]="['/mat-dialog04']">Remove</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
@@ -156,7 +151,7 @@
           </div>
           <br>
           <div class="subtitle">
-            <button mat-stroked-button color="primary" [routerLink]="['/pentasidenav']">Pro</button>
+            <button mat-stroked-button color="primary">Pro</button>
           </div>
           <br>
           Pellentesque accumsan turpis quis est accumsan accumsan.
@@ -168,9 +163,10 @@
 </div>
 <!-- </body> -->
 <div class="footer">
-    <div class="container">
-        <span>Copyright © 2020, All rights reserved </span>
-        <span style="right: 20px;">Best viewed in browsers: IE9 +, Google Chrome, Mozilla Firefox</span>
-    </div>
+  <div class="container">
+    <span>Copyright © 2020, All rights reserved </span>
+    <span style="right: 20px;">Best viewed in browsers: IE9 +, Google Chrome, Mozilla Firefox</span>
+  </div>
 </div>
+
 </html>

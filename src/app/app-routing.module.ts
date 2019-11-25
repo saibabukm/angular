@@ -15,6 +15,10 @@ import { BeforeLoginService } from './core/services/before-login.service';
 import { AfterLoginService } from './core/services/after-login.service';
 
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { MatDialog01Component } from './admin/admin-notes/mat-dialog01/mat-dialog01.component';
+import { MatDialog02Component } from './admin/admin-notes/mat-dialog02/mat-dialog02.component';
+import { MatDialog03Component } from './admin/admin-notes/mat-dialog03/mat-dialog03.component';
+import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialog04.component';
 
 const routes: Routes = [
 
@@ -60,8 +64,27 @@ const routes: Routes = [
     canActivate: [AfterLoginService]
   },
   // otherwise redirect to notfound
-  { path: '**', redirectTo: '/notfound' }
-  
+  { path: '**', redirectTo: '/notfound' },
+  {
+    path: 'mat-dialog01',
+    component: MatDialog01Component,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'mat-dialog02',
+    component: MatDialog02Component,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'mat-dialog03',
+    component: MatDialog03Component,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'mat-dialog04',
+    component: MatDialog04Component,
+    canActivate: [AfterLoginService]
+  },  
 ];
 
 @NgModule({

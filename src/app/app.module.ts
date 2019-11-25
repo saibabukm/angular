@@ -58,6 +58,11 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { HomeComponent } from './home/home.component';
+import { AdminNotesComponent } from './admin/admin-notes/admin-notes.component';
+import { MatDialog01Component } from './admin/admin-notes/mat-dialog01/mat-dialog01.component';
+import { MatDialog02Component } from './admin/admin-notes/mat-dialog02/mat-dialog02.component';
+import { MatDialog03Component } from './admin/admin-notes/mat-dialog03/mat-dialog03.component';
+import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialog04.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,12 @@ import { HomeComponent } from './home/home.component';
     AdminDashboardComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AdminNotesComponent,
+    MatDialog01Component,
+    MatDialog02Component,
+    MatDialog03Component,
+    MatDialog04Component
   ],
   imports: [
     MatInputModule,
