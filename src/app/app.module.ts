@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 import { LoginComponent } from './core/components/login/login.component';
 
 import { SignupComponent } from './core/components/signup/signup.component';
@@ -126,6 +127,7 @@ import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
     FormsModule,
     HttpClientModule,
     SnotifyModule,
+    FilterPipeModule,
     CKEditorModule 
   ],
   providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
