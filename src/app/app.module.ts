@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from 'ng2-ckeditor';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -63,6 +64,7 @@ import { MatDialog01Component } from './admin/admin-notes/mat-dialog01/mat-dialo
 import { MatDialog02Component } from './admin/admin-notes/mat-dialog02/mat-dialog02.component';
 import { MatDialog03Component } from './admin/admin-notes/mat-dialog03/mat-dialog03.component';
 import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialog04.component';
+import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,8 @@ import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialo
     MatDialog01Component,
     MatDialog02Component,
     MatDialog03Component,
-    MatDialog04Component
+    MatDialog04Component,
+    CkeditorComponent
   ],
   imports: [
     MatInputModule,
@@ -122,7 +125,8 @@ import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialo
     MatSliderModule,
     FormsModule,
     HttpClientModule,
-    SnotifyModule
+    SnotifyModule,
+    CKEditorModule 
   ],
   providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults },

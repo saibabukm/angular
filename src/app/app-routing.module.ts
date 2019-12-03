@@ -13,6 +13,7 @@ import { ResponseResetComponent } from './core/components/password/response-rese
 /**Services */
 import { BeforeLoginService } from './core/services/before-login.service';
 import { AfterLoginService } from './core/services/after-login.service';
+import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
 
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { MatDialog01Component } from './admin/admin-notes/mat-dialog01/mat-dialog01.component';
@@ -64,7 +65,7 @@ const routes: Routes = [
     canActivate: [AfterLoginService]
   },
   // otherwise redirect to notfound
-  { path: '**', redirectTo: '/notfound' },
+  // { path: '**', redirectTo: '/notfound' },
   {
     path: 'mat-dialog01',
     component: MatDialog01Component,
@@ -83,6 +84,11 @@ const routes: Routes = [
   {
     path: 'mat-dialog04',
     component: MatDialog04Component,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'ckeditor',
+    component: CkeditorComponent,
     canActivate: [AfterLoginService]
   },  
 ];
