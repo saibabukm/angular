@@ -1,0 +1,15 @@
+<div>
+    <h2 mat-dialog-title>Preview</h2>
+    <hr>
+    <mat-dialog-content>
+        <div [innerHTML]="message">
+        </div>
+        <br>
+        <br>
+        <strong>{{data}}</strong>
+    </mat-dialog-content>
+    <hr>
+    <mat-dialog-actions align="end">
+        <button mat-button color="warn" (click)="onCloseCancel()">CLOSE</button>
+    </mat-dialog-actions>
+</div>

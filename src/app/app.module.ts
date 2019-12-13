@@ -66,6 +66,7 @@ import { MatDialog02Component } from './admin/admin-notes/mat-dialog02/mat-dialo
 import { MatDialog03Component } from './admin/admin-notes/mat-dialog03/mat-dialog03.component';
 import { MatDialog04Component } from './admin/admin-notes/mat-dialog04/mat-dialog04.component';
 import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
+import { EditorDialogComponent } from './shared/editor-dialog/editor-dialog.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
     MatDialog02Component,
     MatDialog03Component,
     MatDialog04Component,
-    CkeditorComponent
+    CkeditorComponent,
+    EditorDialogComponent
   ],
   imports: [
     MatInputModule,

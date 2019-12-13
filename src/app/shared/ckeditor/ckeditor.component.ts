@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+// import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-ckeditor',
@@ -10,7 +11,7 @@ export class CkeditorComponent implements OnInit {
   ckeConfig: any;
   mycontent: string;
   log: string = '';
-  @ViewChild("myckeditor", { static: false }) ckeditor: any;
+  // @ViewChild("myckeditor", { static: false }) ckeditor: any;
 
   constructor() {
     this.mycontent = `<p>My html content</p>`;

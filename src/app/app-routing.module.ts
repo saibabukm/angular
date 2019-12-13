@@ -15,6 +15,7 @@ import { BeforeLoginService } from './core/services/before-login.service';
 import { AfterLoginService } from './core/services/after-login.service';
 import { CkeditorComponent } from './shared/ckeditor/ckeditor.component';
 
+import { EditorDialogComponent } from './shared/editor-dialog/editor-dialog.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { MatDialog01Component } from './admin/admin-notes/mat-dialog01/mat-dialog01.component';
 import { MatDialog02Component } from './admin/admin-notes/mat-dialog02/mat-dialog02.component';
@@ -27,7 +28,7 @@ const routes: Routes = [
   { 
     path: '', 
     component: HomeComponent,
-    canActivate: [BeforeLoginService] 
+    canActivate: [BeforeLoginService]
   },
   { 
     path: 'login', 
@@ -65,7 +66,7 @@ const routes: Routes = [
     canActivate: [AfterLoginService]
   },
   // otherwise redirect to notfound
-  // { path: '**', redirectTo: '/notfound' },
+  { path: '**', redirectTo: '/notfound' },
   {
     path: 'mat-dialog01',
     component: MatDialog01Component,
@@ -90,7 +91,12 @@ const routes: Routes = [
     path: 'ckeditor',
     component: CkeditorComponent,
     canActivate: [AfterLoginService]
-  },  
+  },
+  {
+    path: 'editor-dialog',
+    component:EditorDialogComponent,
+    canActivate: [AfterLoginService]
+  },
 ];
 
 @NgModule({
